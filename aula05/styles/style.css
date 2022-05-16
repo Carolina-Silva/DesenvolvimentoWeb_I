@@ -1,0 +1,22 @@
+*{
+    font-family: sans-serif
+}
+thead,
+.tr_color_footer{
+    background-color: #368a36;
+    color: #fff;
+}
+thead th{
+    text-align: center;
+    padding: 10px;
+}
+th, td{
+    text-align: left;
+    padding: 5px;
+}
+.tr_color1{
+    background-color: #b8e4b8;
+}
+.tr_color2{
+    background-color: #7ca37c;
+}
