@@ -1,0 +1,31 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+/* Color Theme Swatches in Hex */
+.Entre-montes,-montanhas,-vinhas-e-algumas-flores-o-rio-Douro-em-Trás-os-Montes,-Portugal-4-hex { color: #6F7302; }
+body{
+    margin: 0;
+}
+main{
+    max-width: 70%;
+    margin: 0 auto;
+}
+header{
+    padding: 0.2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* titulos */
+h1{
+    background-color: #F23535;
+    color: #fff;
+}
+
+
+/* card com destinos */
+.card_destino img{
+    width:60vw;
+
+}
+.card_destino{
+    /* height: 100vh; */
+}
