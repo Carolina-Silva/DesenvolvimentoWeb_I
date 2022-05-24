@@ -1,31 +1,73 @@
 *{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-/* Color Theme Swatches in Hex */
-.Entre-montes,-montanhas,-vinhas-e-algumas-flores-o-rio-Douro-em-Trás-os-Montes,-Portugal-4-hex { color: #6F7302; }
 body{
     margin: 0;
 }
-main{
+header{
+    padding: 0.2%;
+}
+header h1{
+    margin-left: 10%;
+}
+a{
+    text-decoration: none;
+}
+/* titulos */
+.tituloPagina{
+    padding: 0.8%;
+    background-color: #F23535;
+    color: #fff;
+    text-align: center;
+}
+nav{
+    max-width: 60%;
+    margin: 0 auto 30px;
+}
+nav ul{
+    padding: 0;
+    width: 200px;
+}
+nav a li{
+    margin: 10px;
+    padding: 2%;
+    border-radius: 8px;
+    border: solid #3cac10;
+    color: #3cac10;  
+}
+nav a li:hover{
+    background-color: #3cac10;
+    color: #fff;
+}
+nav li{
+    list-style: none;
+}
+/* card com destinos */
+figure{
+    margin: 0;
+}
+.destinos{
     max-width: 70%;
     margin: 0 auto;
 }
-header{
-    padding: 0.2%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-/* titulos */
-h1{
-    background-color: #F23535;
-    color: #fff;
-}
-
-
-/* card com destinos */
-.card_destino img{
-    width:60vw;
-
-}
 .card_destino{
-    /* height: 100vh; */
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: justify;
+}
+.card_destino img{
+    width:90%;
+}
+.card_destino a{
+    display: inline-flex;
+    justify-content: center;
+    color: #3cac10;
+}
+.card_destino .icon{
+    width: 30px;
+}
+footer{
+    background-color: #3cac1059;
+    text-align: center;
+    padding: 1%;
 }
