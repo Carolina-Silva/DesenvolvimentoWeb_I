@@ -1,0 +1,31 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+#conteudo{
+    width: 70vw;
+    margin: 0 auto;
+}
+header{
+    text-align: center;
+}
+#logo{
+    width: 150px;
+}
+#tituloSite{
+    padding: 20px;
+    background-color:#617a44;
+    text-align: center ;
+    color: #fff;
+}
+p{
+    text-align: justify;
+}
+.pDestaque{
+    font-style: italic;
+    color: #FF611D;
+}
+img{
+    max-width: 70vw;
+    /* background-size: contain; */
+}
