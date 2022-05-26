@@ -56,8 +56,38 @@ figure{
 .card_destino .icon{
     width: 30px;
 }
+form{
+    padding: 6px;
+    background-color: #f23535da;
+    color: white;
+    text-align: center;
+}
+label{
+    margin: 20px 0 0 0;
+    
+}
+input{
+    border: none;
+    padding: 6px;
+    margin: 0 0 20px 0;
+    border-radius: 4px;
+    width: 60%;
+    max-width: 300px;
+}
+form button{
+    margin: 0 10px 10px 0;
+    padding: 1%;
+    width: 100px;
+    border-radius: 8px;
+    border: solid #c53939;
+    color: #F23535;  
+}
+form button:hover{
+    border: solid #F23535;
+    box-shadow: 0 0 1em #dc6969;
+}
 footer{
-    background-color: #F2353559;
+    background-color: #3cac109d;
     text-align: center;
     padding: 1%;
 }
