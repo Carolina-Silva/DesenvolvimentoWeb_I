@@ -14,18 +14,23 @@ header{
 }
 #tituloSite{
     padding: 20px;
-    background-color:#617a44;
+    background-color:#228609;
     text-align: center ;
     color: #fff;
 }
 p{
     text-align: justify;
+    text-indent: 60px;
 }
 .pDestaque{
     font-style: italic;
-    color: #FF611D;
+    color: #6d6b6a;
 }
 img{
     max-width: 70vw;
-    /* background-size: contain; */
+}
+footer{
+    background-color: #2286099d;
+    text-align: center;
+    padding: 1%;
 }
