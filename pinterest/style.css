@@ -26,9 +26,24 @@ header img{
     width: 100px;
 }
 header nav{
+    text-align: center;
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    width: 500px;
+    width: 600px;
+    font-weight: 700;
+    
+}
+nav a{
+    color: #000;
+}
+nav .login{
+    background-color: #E60023;
+    color: #fff;
+}
+nav .register{
+    background-color: #d1d0d0;
+    width: 90px;
 }
 section{
     height: 100vh;
