@@ -9,6 +9,7 @@ a{
 }
 h1{
     font-size: 40pt;
+    margin-bottom: 90px;
 }
 h2{
     font-size: 50px;
@@ -44,6 +45,11 @@ nav .login{
 nav .register{
     background-color: #d1d0d0;
     width: 90px;
+}
+i{
+    margin-left: 20px;
+    font-size: 60px;
+    color:#E60023; ;
 }
 section{
     height: 100vh;
