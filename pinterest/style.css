@@ -84,9 +84,26 @@ section{
     background-color: #FFFD92;
     color: #c31952;
 }
+#frango1{
+    width: 400px;
+    margin: 0 0 0 400px;
+    position: absolute;
+}
+#frango2{
+    width: 300px;
+    margin: 0 0 300px 200px;
+}
 .save{
     background-color: #dafff6;
     color: #006b6c;
+}
+#plantas{
+    width: 600px;
+    margin: 0 70px 0 0px;
+}
+#banheiro{
+    position: absolute;
+    margin: 40px 0 0 800px;
 }
 .create{
     background-color:#FFE2EB;
