@@ -26,14 +26,16 @@ header{
 header img{
     width: 150px;
 }
-header nav{
+li {
+    list-style-type: none;
+  }
+header nav ul{
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 600px;
     font-weight: 700;
-    
 }
 nav a{
     color: #000;
@@ -42,8 +44,16 @@ nav .login{
     background-color: #E60023;
     color: #fff;
 }
+nav .login:hover{
+    background-color: #bb001c;
+    color: #fff;
+}
 nav .register{
     background-color: #d1d0d0;
+    width: 90px;
+}
+nav .register:hover{
+    background-color: #e5e2e2;
     width: 90px;
 }
 i{
