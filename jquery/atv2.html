@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carolina Nascimento">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Jquery</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .white {
+            background-color: white;
+            border: solid 1px rgb(180, 180, 180);
+        }
+
+        #InputP {
+            width: 300px;
+            
+        }
+        #btnAddP{
+            width: 200px;
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+
+<body class="container">
+
+    <!------------------------------ CONTÉUDO ----------------------------->
+    <h1 class="text-center my-4">Exemplo 2 Jquery</h1>
+    <div class=" my-4 d-flex justify-content-around">
+        <div class="box red m-4"></div>
+        <div class="box green m-4"></div>
+        <div class="box blue m-4"></div>
+        <div class="box white m-4"></div>
+    </div>
+    <div class="mb-2 d-flex justify-content-center align-items-center">
+         <input type="email" class="form-control my-4" id="InputP">
+        <button type="submit" class="btn btn-outline-success" id="btnAddP">Adicionar Paragrafo</button>
+    </div>
+    <div class="funcionalidades row">
+        <div class="col d-flex justify-content-around">
+            <button type="button" class="btn btn-outline-dark">Aumetar fonte</button>
+            <button type="button" class="btn btn-outline-dark">Diminur fonte</button><br>
+        </div>
+        <div class="col d-flex justify-content-between">
+            <button type="button" class="btn btn-outline-warning">Remover ultimo Paragráfo</button>
+            <button type="button" class="btn btn-outline-danger">Remover todos Paragráfos</button>
+        </div>
+    </div>
+
+
+    <div id="paragafos"></div>
+
+
+    <!------------------------------ FOOTER ------------------------------->
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("p").on("click", function () {
+                $(this).css({
+                    "color": "darkblue",
+                    "font-size": "20pt",
+                    "font-weight": "bold"
+                });
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
