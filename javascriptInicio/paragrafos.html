@@ -27,13 +27,19 @@
     </style>
     <script>
         function adicionarP() {
+            var paragrafo = document.createElement("p");
+            paragrafo.textContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius asperiores accusamus modi mollitia nulla pariatur soluta perferendis eum adipisci commodi, nisi dolorem aliquid explicabo nam. Culpa aliquam cum illum est.";
+            document.getElementById("paragrafos").appendChild(paragrafo);
 
         }
         function apagaUltimoP() {
+            var ultimo = document.getElementById("paragrafos");
+            ultimo.removeChild(ultimo.lastElementChild);
 
         }
         function apagaTodosP() {
-
+            var apaga = document.getElementById("paragrafos");
+            apaga.remove();
         }
 
     </script>
@@ -41,10 +47,14 @@
 
 <body>
     <main>
+        
         <h1>Praticando Js - Parágrafos Lorem</h1>
         <button onclick="adicionarP()">Adicionar paragrafo</button>
         <button onclick="apagaUltimoP()">Remover último paragrafo</button>
         <button onclick="apagaTodosP()">Remover todos os paragrafos</button>
+        <div id="paragrafos">
+
+        </div>
     </main>
     
 </body>
