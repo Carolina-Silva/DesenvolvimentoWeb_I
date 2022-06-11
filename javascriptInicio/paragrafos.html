@@ -16,6 +16,8 @@
             color: rgb(20, 99, 218);
         }
         button{
+            margin: 20px;
+            display: block;
             border: none;
             border-radius: 4px;
             padding: 10px;
@@ -27,6 +29,12 @@
         function adicionarP() {
 
         }
+        function apagaUltimoP() {
+
+        }
+        function apagaTodosP() {
+
+        }
 
     </script>
 </head>
@@ -34,9 +42,9 @@
 <body>
     <main>
         <h1>Praticando Js - Parágrafos Lorem</h1>
-        <button>Adicionar paragrafo</button>
-        <button>Remover último paragrafo</button>
-        <button>Remover todos os paragrafos</button>
+        <button onclick="adicionarP()">Adicionar paragrafo</button>
+        <button onclick="apagaUltimoP()">Remover último paragrafo</button>
+        <button onclick="apagaTodosP()">Remover todos os paragrafos</button>
     </main>
     
 </body>
