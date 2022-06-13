@@ -15,21 +15,7 @@
             height: 40px;
             border-radius: 8px;
         }
-
-        .red {
-            background-color: red;
-        }
-
-        .green {
-            background-color: green;
-        }
-
-        .blue {
-            background-color: blue;
-        }
-
         .white {
-            background-color: white;
             border: solid 1px rgb(180, 180, 180);
         }
 
@@ -50,39 +36,67 @@
     <!------------------------------ CONTÉUDO ----------------------------->
     <h1 class="text-center my-4">Exemplo 2 Jquery</h1>
     <div class=" my-4 d-flex justify-content-around">
-        <div class="box red m-4"></div>
-        <div class="box green m-4"></div>
-        <div class="box blue m-4"></div>
-        <div class="box white m-4"></div>
+        <div class="box m-4" style="background-color: red;"></div>
+        <div class="box m-4" style="background-color: green;"></div>
+        <div class="box m-4" style="background-color: blue;"></div>
+        <div class="box m-4" style="background-color: white;"></div>
     </div>
     <div class="mb-2 d-flex justify-content-center align-items-center">
-         <input type="email" class="form-control my-4" id="InputP">
+         <input type="text" class="form-control my-4" id="InputP">
         <button type="submit" class="btn btn-outline-success" id="btnAddP">Adicionar Paragrafo</button>
     </div>
     <div class="funcionalidades row">
         <div class="col d-flex justify-content-around">
-            <button type="button" class="btn btn-outline-dark">Aumetar fonte</button>
-            <button type="button" class="btn btn-outline-dark">Diminur fonte</button><br>
+            <button type="button" class="btn btn-outline-dark aumentar">Aumetar fonte</button>
+            <button type="button" class="btn btn-outline-dark diminuir">Diminur fonte</button><br>
         </div>
         <div class="col d-flex justify-content-between">
-            <button type="button" class="btn btn-outline-warning">Remover ultimo Paragráfo</button>
-            <button type="button" class="btn btn-outline-danger">Remover todos Paragráfos</button>
+            <button type="button" class="btn btn-outline-warning remover_ultimo">Remover ultimo Paragráfo</button>
+            <button type="button" class="btn btn-outline-danger remover_tudo">Remover todos Paragráfos</button>
         </div>
     </div>
 
 
-    <div id="paragafos"></div>
+    <div id="paragafos">oi</div>
 
 
     <!------------------------------ FOOTER ------------------------------->
     <script src="./jquery-3.6.0.js"></script>
     <script>
+        //Trocar cor do body-------------------------------------
         $(function () {
-            $("p").on("click", function () {
-                $(this).css({
-                    "color": "darkblue",
-                    "font-size": "20pt",
-                    "font-weight": "bold"
+            $(".box").on("click", function () {
+                var cor = $(this).css("background-color");
+                $("body").css({
+                   "background-color": cor
+                });
+            });
+        });
+         //Add paragrafo-------------------------------------
+         $(function() {
+            $("btnAddP").on("click", function()  {
+                $("InputP").keyup(function(){
+                    var texto = ($(this).val());
+                    alert($(texto).val());
+                });
+                
+            });
+            
+         });
+
+        //aumenta letra-------------------------------------
+        $(function () {
+            $(".aumentar").on("click", function () {
+                $("#paragafos").css({
+                    "font-size": "+=4px",
+                });
+            });
+        });
+        //diminui letra-------------------------------------
+        $(function () {
+            $(".diminuir").on("click", function () {
+                $("#paragafos").css({
+                    "font-size": "-=4px",
                 });
             });
         });
