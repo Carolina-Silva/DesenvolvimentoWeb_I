@@ -57,7 +57,8 @@
     </div>
 
 
-    <div id="paragafos">oi</div>
+    <div id="paragafos"></div>
+    
 
 
     <!------------------------------ FOOTER ------------------------------->
@@ -73,34 +74,29 @@
             });
         });
          //Add paragrafo-------------------------------------
-         $(function() {
-            $("btnAddP").on("click", function()  {
-                $("InputP").keyup(function(){
-                    var texto = ($(this).val());
-                    alert($(texto).val());
-                });
-                
-            });
-            
-         });
-
-        //aumenta letra-------------------------------------
+         $(function(){
+            $("#btnAddP").click(function(){
+                var texto = $("#InputP").val();
+                var paragrafo = document.createElement("p");
+                paragrafo.innerHTML = texto       
+                 $("#paragafos").append(paragrafo);
+             });
+        });
+        //tamanhos de letra----------------------------------------
         $(function () {
             $(".aumentar").on("click", function () {
                 $("#paragafos").css({
                     "font-size": "+=4px",
                 });
             });
-        });
-        //diminui letra-------------------------------------
-        $(function () {
             $(".diminuir").on("click", function () {
                 $("#paragafos").css({
                     "font-size": "-=4px",
                 });
             });
         });
-
+        //remover todos paragrafos----------------------------------------
+        
     </script>
 
 
