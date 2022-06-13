@@ -95,8 +95,16 @@
                 });
             });
         });
-        //remover todos paragrafos----------------------------------------
-        
+        //remover paragrafos----------------------------------------
+        $(function () {
+            $(".remover_ultimo").on("click", function () {
+                var ultimoP = document.getElementById("paragafos");
+                ultimoP.removeChild(ultimoP.lastElementChild);
+            });
+            $(".remover_tudo").on("click", function () {
+                $("#paragafos").empty();
+            });
+        });
     </script>
 
 
