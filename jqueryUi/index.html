@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Carolina Nascimento">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>Jquery UI</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    .box_content{
+      width: 90%;
+      margin: 20px;
+    }
+    #red,
+    #green,
+    #blue {
+      float: left;
+      clear: left;
+      width: 300px;
+      margin: 15px;
+    }
+
+    #swatch {
+      width: 120px;
+      height: 100px;
+      margin-top: 18px;
+      margin-left: 350px;
+      background-image: none;
+    }
+
+    #red .ui-slider-range {
+      background: #ef2929;
+    }
+
+    #red .ui-slider-handle {
+      border-color: #ef2929;
+    }
+
+    #green .ui-slider-range {
+      background: #8ae234;
+    }
+
+    #green .ui-slider-handle {
+      border-color: #8ae234;
+    }
+
+    #blue .ui-slider-range {
+      background: #729fcf;
+    }
+
+    #blue .ui-slider-handle {
+      border-color: #729fcf;
+    }
+
+    #sortable {
+      list-style-type: none;
+      width: 60%;
+    }
+
+    #sortable li {
+      margin: 0 5px 5px 5px;
+      padding: 10px;
+      font-size: 15px;
+      height: 40px;
+    }
+    
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#tabs").tabs();
+    });
+    $(function () {
+      function hexFromRGB(r, g, b) {
+        var hex = [
+          r.toString(16),
+          g.toString(16),
+          b.toString(16)
+        ];
+        $.each(hex, function (nr, val) {
+          if (val.length === 1) {
+            hex[nr] = "0" + val;
+          }
+        });
+        return hex.join("").toUpperCase();
+      }
+      function refreshSwatch() {
+        var red = $("#red").slider("value"),
+          green = $("#green").slider("value"),
+          blue = $("#blue").slider("value"),
+          hex = hexFromRGB(red, green, blue);
+        $("#swatch").css("background-color", "#" + hex);
+      }
+
+      $("#red, #green, #blue").slider({
+        orientation: "horizontal",
+        range: "min",
+        max: 255,
+        value: 127,
+        slide: refreshSwatch,
+        change: refreshSwatch
+      });
+      $("#red").slider("value", 255);
+      $("#green").slider("value", 140);
+      $("#blue").slider("value", 60);
+    });
+
+    $(function () {
+      $("#sortable").sortable();
+    });
+  </script>
+</head>
+
+<body class="ui-widget-content container" style="border:0;">
+  <h1>Cores RGB</h1>
+  <div class="box_content">
+    <p>Os valores de cor RGB são suportados em todos os navegadores.</p>
+
+    <p> Um valor de cor RGB é especificado com: rgb(red, green, blue).</p>
+
+    <p>Cada parâmetro (vermelho, verde e azul) define a intensidade da cor como um número inteiro entre 0 e 255.</p>
+
+    <p> Por exemplo, rgb(0, 0, 255) é renderizado como azul, porque o parâmetro blue é definido como seu valor mais alto
+      (255) e os outros são definidos como 0.</p>
+    <p  class="h6">Vamos ver com o que geralmente essas cores são associadas:</p>
+    <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Vermelho</a></li>
+      <li><a href="#tabs-2">Verde</a></li>
+      <li><a href="#tabs-3">Azul</a></li>
+    </ul>
+    <div id="tabs-1">
+      <p>Esta cor quente transmite muita energia e simboliza a paixão e o amor. Por ser uma cor forte, muitas vezes
+        também é associada ao poder e à violência. É conhecida por estimular a circulação e melhorar a autoestima.</p>
+    </div>
+    <div id="tabs-2">
+      <p>Esta é a cor mais associada à natureza e ao sentimento de esperança, mas também tem relação com conceitos como
+        saúde, dinheiro, vitalidade e juventude. Muitas vezes é utilizada em ambientes para transmitir um efeito
+        calmante.
+      </p>
+    </div>
+    <div id="tabs-3">
+      <p>A cor azul está relacionada com a nobreza e costuma ser usada para transmitir harmonia, tranquilidade e
+        serenidade. Por ser uma cor fria, às vezes é associada à monotonia e depressão.</p>
+    </div>
+  </div>
+  </div>
+  
+<div class="box_content">
+   <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+    <span class="ui-icon ui-icon-pencil" style="float:left; margin:-2px 5px 0 0;"></span>
+    Vamos testar! Misture as cores RGB e crie uma nova cor:
+  </p>
+
+  <div id="red"></div>
+  <div id="green"></div>
+  <div id="blue"></div>
+
+  <div id="swatch" class="ui-widget-content ui-corner-all"></div><br>
+</div>
+
+  <div class="box_content">
+    <p  class="h6">Ordene as cores RGB da que você mais gosta para a que menos gosta:</p>
+    <ul id="sortable">
+      <li class="ui-state-default" style="color:blue;">Azul</li>
+      <li class="ui-state-default" style="color:red;">Vermelho</li>
+      <li class="ui-state-default" style="color:green;">Verde</li>
+    </ul>
+  </div>
+
+
+</body>
+
+</html>
