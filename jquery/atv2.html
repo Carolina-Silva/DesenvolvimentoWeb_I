@@ -28,7 +28,7 @@
             margin-left: 20px;
         }
         .destaque{
-            background-color: yellowgreen;
+            background-color: rgb(228, 241, 41);
         }
     </style>
 
@@ -62,9 +62,6 @@
 
     <div id="paragafos"></div>
     
-
-
-    <!------------------------------ FOOTER ------------------------------->
     <script src="./jquery-3.6.0.js"></script>
     <script>
         //Trocar cor do body-------------------------------------
@@ -109,9 +106,13 @@
             });
         });
 
+        // houver ----------------------------------------
         $(function () {
-            $("p").on("mouseover", function () {
-               $(this).addClass("destaque");
+            $("body").on("mouseover", "p", function(){
+                $(this).addClass("destaque");
+            });
+            $("body").on("mouseout", "p", function(){
+                $(this).removeClass("destaque");
             });
             
         });
