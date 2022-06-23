@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carolina Nascimento">
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="">
+
+</head>
+
+<body>
+    <main>
+
+    </main>
+    <script>
+        var qht;
+        var vht;
+        var inss;
+        var tdes;
+        var sb;
+        var sl;
+
+        qht = parseInt(window.prompt('informe Quntidade de horas trabalhadas por mês: ', '00'));
+        vht = parseInt(window.prompt('informe o valor da hora trabalhada (25 a 50): ', '00'));
+        inss = parseInt(window.prompt('informe o percentual de desconto INSS: ', '00'));
+
+
+
+        sb = vht *qht;
+        tdes = (inss/100)*sb;
+        sl = sb - tdes
+
+        document.write('Demonstrativo para calculo do Salario Liquido:');
+
+        document.write('Quantidade de horas trabalhadas por mês ' + qht);
+        if(qht > 180){
+            document.write('...(Valor máximo excedido!)')
+        }
+        if(qht < 135){
+            document.write('...(Valor mínimo excedido!)')
+        }
+
+        document.write('Valor da hora trabalhada (25 a 50): ' + vht);
+        if(vht > 50){
+            document.write('...(Valor máximo excedido!)')
+        }
+        if(vht < 25){
+            document.write('...(Valor mínimo excedido!)')
+        }
+
+        document.write('Percentual de desconto INSS: ' + inss);
+        if(inss > 15){
+            document.write('...(Valor máximo excedido!)')
+        }
+        if(inss < 5){
+            document.write('...(Valor mínimo excedido!)')
+        }
+
+        document.write(' ================================= ');
+        document.write('Salário Bruto: ' + sb);
+        document.write('Total descontos: ' + tdes);
+        document.write('Salário Líquido: ' + sl);
+
+        if (sl > 10500){
+            document.write('Salário Elevado: maior que 10.500');
+        }
+        else{
+            if(sl > 6000){
+                document.write('Salário Satisfatório: maior que 6.000');
+            }
+            else{
+                if(sl > 3000){
+                    document.write('Salário Moderado: maior que 3.000');
+                }
+                else{
+                    document.write('Salário Insatisfatório: menor ou igual a 3.000');
+                }
+            }
+        }
+
+
+       
+
+    </script>
+</body>
+
+</html>
