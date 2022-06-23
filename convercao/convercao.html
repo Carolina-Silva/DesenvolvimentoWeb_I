@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carolina Nascimento">
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(209, 209, 209);
+        }
+        form{
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            max-width: 400px;
+            height: 40vh;
+            text-align: center;
+        }
+        .btn{ 
+            margin: 20px 5px !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <form name="meuForm" action=" " method="post">
+            <h2>Somatória</h2>
+            <label for="valor1">Entre com valor 1:</label>
+            <input type="text" name="valor1">
+
+            <hr>
+            <label for="valor2">Entre com valor 2:</label>
+            <input type="text" name="valor2">
+
+
+            <input type="button" name="button_somar" value="somar" class="btn btn-success" onClick="soma()" />
+            <input type="reset" name="button_apagar" value="apagar" class="btn btn-danger">
+        </form>
+    </main>
+    <script>
+        var value1;
+var value2;
+var soma;
+
+function soma(){
+    value1 = parseInt(document.meuForm.valor1.value);
+    value2 = parseInt(document.meuForm.valor2.value);
+
+    soma = value1 + value2;
+
+    window.alert('resultado da somatória = ' + soma.toString());
+}
+    </script>
+</body>
+
+</html>
