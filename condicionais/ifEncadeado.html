@@ -33,50 +33,50 @@
         tdes = (inss/100)*sb;
         sl = sb - tdes
 
-        document.write('Demonstrativo para calculo do Salario Liquido:');
+        document.write('<p><b>Demonstrativo para calculo do Salario Liquido:</b></p>');
 
-        document.write('Quantidade de horas trabalhadas por mês ' + qht);
+        document.write('<p>Quantidade de Horas Trabalhadas: (135 a 180) => <b>' + qht + '</b>');
         if(qht > 180){
-            document.write('...(Valor máximo excedido!)')
+            document.write('...(<b>Valor Máximo Excedido!</b>)')
         }
         if(qht < 135){
-            document.write('...(Valor mínimo excedido!)')
+            document.write('...(<b>Valor Mínimo Inválido!</b>)')
         }
 
-        document.write('Valor da hora trabalhada (25 a 50): ' + vht);
+        document.write('<p>Valor da Hora Trabalhada: (25 a 50) => <b> ' + vht  + '</b>');
         if(vht > 50){
-            document.write('...(Valor máximo excedido!)')
+            document.write('...(<b>Valor Máximo Excedido!</b>)')
         }
         if(vht < 25){
-            document.write('...(Valor mínimo excedido!)')
+            document.write('...(<b>Valor Mínimo Inválido!</b>)')
         }
 
-        document.write('Percentual de desconto INSS: ' + inss);
+        document.write('<p>Percentual de Desconto INSS: (5 a 15) => <b>' + inss + '</b>');
         if(inss > 15){
-            document.write('...(Valor máximo excedido!)')
+            document.write('...(<b>Valor Máximo Excedido!</b>)')
         }
         if(inss < 5){
-            document.write('...(Valor mínimo excedido!)')
+            document.write('...(<b>Valor Mínimo Inválido!</b>)')
         }
 
         document.write(' ================================= ');
-        document.write('Salário Bruto: ' + sb);
-        document.write('Total descontos: ' + tdes);
-        document.write('Salário Líquido: ' + sl);
+        document.write('<p><b>Salario BRUTO = </b>' + sb + '</p>');
+        document.write('<p><b>Total de Desconto INSS = </b>' + tdes  + '</p>');
+        document.write('<p><b>Salário LÍQUIDO = </b>' + sl);
 
         if (sl > 10500){
-            document.write('Salário Elevado: maior que 10.500');
+            document.write('<b>Salário Elevado! </b>maior que 10.500');
         }
         else{
             if(sl > 6000){
-                document.write('Salário Satisfatório: maior que 6.000');
+                document.write('<b>Salário Satisfatório! </b>maior que 6.000');
             }
             else{
                 if(sl > 3000){
-                    document.write('Salário Moderado: maior que 3.000');
+                    document.write('<b>Salário Moderado! </b>maior que 3.000');
                 }
                 else{
-                    document.write('Salário Insatisfatório: menor ou igual a 3.000');
+                    document.write('<b>Salário Insatisfatório! </b>menor ou igual a 3.000');
                 }
             }
         }
